@@ -1,0 +1,341 @@
+body {
+   background: linear-gradient(
+        to bottom,
+        #0b1b2d 0%,     /* azul escuro topo */
+        #0b1b2d 20%,    /* mantém o azul escuro um pouco */
+        #0c3d2b 50%,    /* verde escuro no meio */
+        #0b1b2d 100%    /* volta para o azul escuro no final */
+   );
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding-left: 60px;          /* opcional: cria um recuo bonito */
+}
+
+/* Painel de Histórico */
+.painel-historico {
+    width: 300px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid #D4AF37;
+    border-radius: 15px;
+    padding: 20px;
+    height: fit-content;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.cabecalho-historico {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    
+}
+
+.cabecalho-historico h3 {
+    color: #D4AF37;
+    margin: 0;
+    font-size: 20px;
+    
+}
+
+.botao-limpar {
+    background-color: rgba(212, 175, 55, 0.2);
+    color: #D4AF37;
+    border: 1px solid #D4AF37;
+    padding: 5px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: 0.2s;
+}
+
+.botao-limpar:hover {
+    background-color: rgba(212, 175, 55, 0.4);
+}
+
+.resumo-estatisticas {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.item-estatistica {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+    color: white;
+}
+
+.rotulo-estatistica {
+    font-weight: 600;
+}
+
+.valor-estatistica {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.valor-estatistica.vitorias {
+    color: #4ade80;
+}
+
+.valor-estatistica.derrotas {
+    color: #f87171;
+}
+
+.valor-estatistica.empates {
+    color: #fbbf24;
+}
+
+.lista-historico {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.history-item {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    padding: 12px;
+    border-left: 4px solid;
+    transition: 0.2s;
+}
+
+.history-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.history-item.win {
+    border-left-color: #4ade80;
+}
+
+.history-item.loss {
+    border-left-color: #f87171;
+}
+
+.history-item.tie {
+    border-left-color: #fbbf24;
+}
+
+.history-item-result {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.history-item.win .history-item-result {
+    color: #4ade80;
+}
+
+.history-item.loss .history-item-result {
+    color: #f87171;
+}
+
+.history-item.tie .history-item-result {
+    color: #fbbf24;
+}
+
+.history-item-score {
+    color: #D4AF37;
+    font-size: 13px;
+}
+
+.history-item-date {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+.no-history {
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    padding: 20px;
+    font-style: italic;
+}
+
+/* Container do Jogo */
+.container-jogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.local-dealer {
+    width: 800px;
+    height: 220px;
+
+    background:rgba(255, 255, 255, 0.05);
+    border: 3px solid #D4AF37;
+    border-radius: 20px;
+    position: relative;
+
+    padding: 15px;
+    margin-bottom: 20px;
+    
+}
+
+.titulo-dealer {
+    position: absolute;
+    color: #D4AF37;
+    top: 10px;
+    left: 15px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.local-jogador {
+    width: 800px;
+    height: 220px;
+
+    background:rgba(255, 255, 255, 0.05);
+    border: 3px solid #D4AF37;
+    border-radius: 20px;
+    position: relative;
+
+    padding: 15px;
+}
+
+.titulo-jogador {
+    position: absolute;
+    color: #D4AF37;
+    top: 10px;
+    left: 15px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+#cartas-dealer {
+    margin-top: 40px;
+}
+
+#cartas-dealer img {
+    height: 150px;
+    width: 100px;
+    margin: 1px;
+}
+
+#cartas-jogador {
+    margin-top: 40px;
+}
+
+#cartas-jogador img {
+    height: 150px;
+    width: 100px;
+    margin: 5px;
+}
+
+.botoes-telajogo {
+    display: flex;
+    gap: 20px; /* espaço entre os botões */
+    justify-content: center; /* centralizar na linha */
+    align-items: center;
+    margin: 40px 0;
+}
+
+.botoes-telajogo button {
+    width: 140px;   /* padroniza o tamanho */
+    height: 50px;
+}
+
+#pedir {
+    background-color: green;
+    color: white;
+    font-size: 20px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+#pedir:hover {
+    transform: scale(1.05);
+}
+
+#parar {
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+#parar:hover {
+    transform: scale(1.05);
+}
+
+#reiniciar {
+    background-color: #D4AF37;
+    color: white;
+    width: 140px;   /* padroniza o tamanho */
+    height: 50px;
+    font-size: 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+#reiniciar:hover {
+    transform: scale(1.05);
+}
+
+#sair {
+    position: absolute;
+    top: 20px;       /* distância do topo */
+    right: 65px;     /* distância da direita */
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #D4AF37;
+    color: white;
+    width: 140px;   /* padroniza o tamanho */
+    height: 50px;
+    font-size: 20px;
+    border-radius: 12px;
+    border: 2px solid #D4AF37;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+#sair:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#resultado-texto {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    body {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .painel-historico {
+        width: 90%;
+        max-width: 800px;
+        max-height: 400px;
+    }
+    
+    .local-dealer,
+    .local-jogador {
+        width: 90%;
+        max-width: 800px;
+    }
+}
