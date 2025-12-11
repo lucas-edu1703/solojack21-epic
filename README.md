@@ -78,5 +78,5 @@ projeto_blackjack2/ ← pasta raiz do projeto
 
 
 ## 🤝 Autores  
-- Lucas Eduardo / le5691864@gmail.com / @lucass.soars
-- Manoela Caterini / manoelacaterinibrito@gmail.com / @caaterini
+- Lucas Eduardo / le5691864@gmail.com / @lucass.soars / https://github.com/lucas-edu1703
+- Manoela Caterini / manoelacaterinibrito@gmail.com / @caaterini / https://github.com/manoelacaterinibrito-hub
