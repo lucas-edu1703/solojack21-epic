@@ -20,20 +20,35 @@ Criar uma aplicação web funcional que permita ao jogador:
 
 ## 🧩 Estrutura de arquivos  
 projeto_blackjack2/ ← pasta raiz do projeto
+
 ├── pages/ ← páginas HTML
+
 │ ├── telainicial.html ← tela inicial
+
 │ ├── jogo.html ← tela de jogo
+
 │ └── resultado.html ← tela de resultados
+
 ├── style/ ← arquivos CSS
+
 │ ├── telainicial.css ← estilização página inicial
+
 │ ├── jogo2.css ← estilização página de jogo
+
 │ └── resultado.css ← estilização página de resultados
+
 ├── script/ ← arquivos JavaScript
+
 │ ├── modal.js ← código/lógica do modal
+
 │ ├── script2.js ← código/lógica do jogo (botões, funções)
+
 │ └── resultado.js código da lógica da tela de resultado
+
 ├── cards/ ← imagens das cartas de baralho 
+
 │ 
+
 └── README.md ← este arquivo de documentação
 
 
