@@ -12,6 +12,42 @@ Criar uma aplicação web funcional que permita ao jogador:
 - ver cartas visíveis/escondidas corretamente;  
 - ver o histórico de partidas com pontuações e resultados.  
 
+
+## Como Jogar
+
+O objetivo do jogo é chegar o mais próximo possível de 21 pontos sem ultrapassá-los. Quem passar de 21 perde automaticamente.  
+
+- Cada jogador começa com **2 cartas**.  
+- **Valores das cartas:**
+  - Cartas numeradas (2–10) valem seu número.  
+  - Valete (J), Dama (Q) e Rei (K) valem 10 pontos.  
+  - Ás (A) vale 1 ou 11, dependendo do que for mais vantajoso.  
+- Durante o turno, o jogador pode:
+  - **Pedir carta (Hit):** recebe uma carta adicional.  
+  - **Parar (Stand):** mantém a soma atual e encerra o turno.  
+- O **dealer** joga seguindo regras fixas, geralmente parando ao alcançar 17 ou mais.  
+- Quem tiver a maior soma ≤ 21 vence.  
+- Uma mão de **Ás + 10/J/Q/K** nas duas primeiras cartas é chamada de **Blackjack** e vence automaticamente na maioria das regras.
+
+
+📈 Como a rodada funciona
+
+Distribuição: todos os jogadores recebem duas cartas.
+
+Decisões dos jogadores:
+
+Pedir carta (Hit): você pega mais uma carta do monte para tentar aumentar sua soma.
+
+Parar (Stand): você decide que não quer mais cartas e fica com sua soma atual.
+
+Se ultrapassar 21 ao pedir cartas, você perde imediatamente.
+
+Quando todos os jogadores terminam, o dealer vira sua carta fechada e joga seguindo regras específicas (ex.: parar quando tiver 17 ou mais).
+
+Quem tiver a maior soma ≤ 21 vence contra o dealer.
+
+Empates normalmente devolvem suas apostas, ninguém ganha nem perde
+
 ## 📦 Tecnologias  
 - HTML5  
 - CSS3  
