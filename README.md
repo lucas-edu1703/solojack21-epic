@@ -1,0 +1,118 @@
+# solojack21-epic
+
+# SoloJack 21
+
+**SoloJack 21** é uma versão online e minimalista do Blackjack (“21”), feita com HTML, CSS e JavaScript puros — sem frameworks.  
+
+## 🎯 Objetivo  
+Criar uma aplicação web funcional que permita ao jogador:  
+- iniciar uma partida contra o dealer;  
+- pedir cartas, parar;  
+- seguir as regras clássicas de Blackjack;  
+- ver cartas visíveis/escondidas corretamente;  
+- ver o histórico de partidas com pontuações e resultados.  
+
+
+## Como Jogar
+
+O objetivo do jogo é chegar o mais próximo possível de 21 pontos sem ultrapassá-los. Quem passar de 21 perde automaticamente.  
+
+- Cada jogador começa com **2 cartas**.  
+- **Valores das cartas:**
+  - Cartas numeradas (2–10) valem seu número.  
+  - Valete (J), Dama (Q) e Rei (K) valem 10 pontos.  
+  - Ás (A) vale 1 ou 11, dependendo do que for mais vantajoso.  
+- Durante o turno, o jogador pode:
+  - **Pedir carta (Hit):** recebe uma carta adicional.  
+  - **Parar (Stand):** mantém a soma atual e encerra o turno.  
+- O **dealer** joga seguindo regras fixas, geralmente parando ao alcançar 17 ou mais.  
+- Quem tiver a maior soma ≤ 21 vence.  
+- Uma mão de **Ás + 10/J/Q/K** nas duas primeiras cartas é chamada de **Blackjack** e vence automaticamente na maioria das regras.
+
+
+📈 Como a rodada funciona
+
+Distribuição: todos os jogadores recebem duas cartas.
+
+Decisões dos jogadores:
+
+Pedir carta (Hit): você pega mais uma carta do monte para tentar aumentar sua soma.
+
+Parar (Stand): você decide que não quer mais cartas e fica com sua soma atual.
+
+Se ultrapassar 21 ao pedir cartas, você perde imediatamente.
+
+Quando todos os jogadores terminam, o dealer vira sua carta fechada e joga seguindo regras específicas (ex.: parar quando tiver 17 ou mais).
+
+Quem tiver a maior soma ≤ 21 vence contra o dealer.
+
+Empates normalmente devolvem suas apostas, ninguém ganha nem perde
+
+## 📦 Tecnologias  
+- HTML5  
+- CSS3  
+- JavaScript (ES6+)  
+- localStorage (para histórico de partidas)  
+
+## 🧩 Estrutura de arquivos  
+projeto_blackjack2/ ← pasta raiz do projeto
+
+├── pages/ ← páginas HTML
+
+│ ├── telainicial.html ← tela inicial
+
+│ ├── jogo.html ← tela de jogo
+
+│ └── resultado.html ← tela de resultados
+
+├── style/ ← arquivos CSS
+
+│ ├── telainicial.css ← estilização página inicial
+
+│ ├── jogo2.css ← estilização página de jogo
+
+│ └── resultado.css ← estilização página de resultados
+
+├── script/ ← arquivos JavaScript
+
+│ ├── modal.js ← código/lógica do modal
+
+│ ├── script2.js ← código/lógica do jogo (botões, funções)
+
+│ └── resultado.js código da lógica da tela de resultado
+
+├── cards/ ← imagens das cartas de baralho 
+
+│ 
+
+└── README.md ← este arquivo de documentação
+
+
+## 🚀 Como usar / testar  
+
+1. Baixe o projeto clicando no botão **Download ZIP** (se estiver no GitHub) ou recebendo a pasta do projeto diretamente.
+2. Descompacte a pasta (se for um ZIP) para qualquer lugar do seu computador.
+3. Certifique-se de que a pasta `cards/` está presente com todas as imagens das cartas.
+4. Abra o arquivo `telainicial.html` com um navegador moderno (Chrome, Edge, Firefox ou Brave).
+5. Clique em **INICIAR JOGO** para começar.
+6. Durante o jogo, use os botões **Pedir** e **Parar** para jogar.
+7. Ao final da rodada, a tela de resultado será exibida.
+8. O histórico de partidas é salvo automaticamente no navegador `localStorge` e aparece na tela de jogo.
+
+
+## ✅ Funcionalidades implementadas  
+
+- Embaralhamento aleatório do baralho  
+- Distribuição inicial correta: jogador recebe 2 cartas; dealer recebe 1 visível + 1 escondida  
+- Lógica de Ás (vale 11 ou 1 conforme necessário)  
+- Dealer compra cartas automaticamente até atingir pelo menos 17  
+- Detecção de vitória, derrota e empate  
+- Histórico de partidas, com resultado e pontuações salvas via localStorage  
+- Modal de regras explicando as regras do jogo  
+- Interface visual com cartas, design responsivo, estilo coerente  
+- Botões para reiniciar partida ou voltar ao menu  
+
+
+## 🤝 Autores  
+- Lucas Eduardo / le5691864@gmail.com / @lucass.soars / https://github.com/lucas-edu1703
+- Manoela Caterini / manoelacaterinibrito@gmail.com / @caaterini / https://github.com/manoelacaterinibrito-hub
