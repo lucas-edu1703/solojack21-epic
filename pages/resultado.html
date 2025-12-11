@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado - SoloJack 21</title>
+    <link rel="stylesheet" href="resultado.css">
+</head>
+<body>
+    <div class="result-container" id="result-container">
+        <div class="result-box" id="result-box">
+            <h1 class="result-title" id="titulo-resultado"></h1>
+            
+            <div class="scores">
+                <div class="score-item">
+                    <span class="score-label">Sua Pontuação:</span>
+                    <span class="score-value" id="pontuacao-jogador">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="score-label">Pontuação do Dealer:</span>
+                    <span class="score-value" id="pontuacao-dealer">0</span>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button class="btn-restart" onclick="window.location.href='jogo.html'">
+                    Jogar Novamente
+                </button>
+                <button class="btn-menu" onclick="window.location.href='telainicial.html'">
+                    Menu Inicial
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="resultado.js"></script>
+</body>
+</html>

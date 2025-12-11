@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SoloJack 21</title>
+        <link rel="stylesheet" href="jogo2.css">
+    </head>
+
+    <body>
+        <div class="painel-historico" id="painel-historico">
+            <div class="cabecalho-historico">
+                <h3>Histórico de Partidas</h3>
+                <button id="limpar-historico" class="botao-limpar">Limpar</button>
+            </div>
+            <div class="resumo-estatisticas" id="resumo-estatisticas">
+                <div class="item-estatistica">
+                    <span class="rotulo-estatistica">Vitórias:</span>
+                    <span class="valor-estatistica vitorias" id="total-vitorias">0</span>
+                </div>
+                <div class="item-estatistica">
+                    <span class="rotulo-estatistica">Derrotas:</span>
+                    <span class="valor-estatistica derrotas" id="total-derrotas">0</span>
+                </div>
+                <div class="item-estatistica">
+                    <span class="rotulo-estatistica">Empates:</span>
+                    <span class="valor-estatistica empates" id="total-empates">0</span>
+                </div>
+            </div>
+            <div class="lista-historico" id="lista-historico">
+                <!-- Histórico será inserido aqui -->
+            </div>
+        </div>
+
+        <div class="container-jogo">
+            <div class="local-dealer">
+                <span class="titulo-dealer">Dealer <span id="soma-dealer"></span></span>
+                <div id="cartas-dealer">
+                    <!-- Já terá a carta escondida (verso) inserida pelo JS -->
+                </div>
+            </div>
+
+            <div class="local-jogador">
+                <span class="titulo-jogador">Você <span id="soma-jogador"></span></span>
+                <div id="cartas-jogador"></div>
+            </div>
+        
+            <br>
+                <div class="botoes-telajogo">
+                    <button id="pedir">Pedir</button>
+                    <button id="parar">Parar</button>
+                    <button id="reiniciar">Reiniciar</button>
+                </div>
+                
+                <button id="sair">Sair</button>
+        </div>
+        
+        <script src="script2.js"></script>
+    </body>
+</html>

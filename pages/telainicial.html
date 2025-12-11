@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoloJack 21</title>
+    <link rel="stylesheet" href="telainicial.css">
+</head>
+<body>
+    <div class="conteudo-inicio">
+        <div class="logo">
+            <span class="icone-espada">♠</span>
+            <h1>SOLOJACK 21</h1>
+            <span class="icone-espada">♠</span>
+        </div>
+        <button class="botao botao-amarelo botao-grande" data-testid="start-game-btn" onclick="window.location.href='jogo.html'">INICIAR JOGO</button>
+        <button class="botao botao-transparente" data-testid="regras-btn">
+            <span class="icone-info">ⓘ</span> REGRAS
+        </button>
+    </div>
+
+    <!-- Fundo escurecido -->
+    <div id="sobreposicao" class="sobreposicao oculto"></div>
+
+    <!-- Modal das regras -->
+    <div id="modal-regras" class="modal oculto">
+        <button class="botao-fechar" id="fechar-modal">✖</button>
+
+        <h2 style="color: #D4AF37;">Regras do SoloJack 21</h2>
+
+        <p style="color: white;">
+            Objetivo: Obter uma pontuação mais próxima de 21 ou maior do que o dealer, sem ultrapassar 21. 
+            <br><br>
+            Valores das Cartas <br>
+            • Cartas 2-10: valor nominal <br>
+            • J, Q, K: valem 10 pontos <br>
+            • Ás: vale 11 ou 1 (automaticamente ajustado) <br><br>
+            Como Vencer <br>
+            • Obter 21 pontos (Blackjack) <br>
+            • Ter pontuação maior que o dealer sem ultrapassar 21 <br>
+            • Dealer ultrapassar 21 pontos <br><br>
+            Como Perder <br>
+            • Ultrapassar 21 pontos (estouro) <br>
+            • Ter pontuação menor que o dealer <br><br>
+            Ações Disponíveis <br>
+            PEDIR: Pedir mais uma carta <br>
+            PARAR: Parar e manter a mão atual <br>
+            O dealer deve pedir cartas até atingir pelo menos 17 pontos.
+        </p>
+    </div>
+
+    <script src="modal.js"></script>
+</body>
+</html>
